@@ -1,7 +1,15 @@
 <div dir='rtl'>بنام خدا</div>
 <div dir='rtl'>خلاصه ای بر گیت</div>
+###### top
 
-```vala
+
+- [Some Sequence Code](#some-sequence-code)
+- [Stach](#stach)
+- [Deletion](#deletion)
+
+[top](#top)
+### Some Sequence Code
+```bash
   git init
   git status
   git add
@@ -25,9 +33,10 @@
   git ls-tree BranchName //show files in BranchName
   git branch -m <oldname> <newname> //Rename Branch
 
-
 ```
-Stach Working
+
+[top](#top)
+### Stach Working
 ```vala
 git stash //Save all changes in Memory, it is needed before changiing Brach when you did not commit changes.
 git stash --keep-index //the same only tell GIT: do stash only which in stage
@@ -63,7 +72,20 @@ Merge Or Rebase?
     export GIT_SSL_NO_VERIFY=true
     git push -u origin master 
   ```
-  
+ 
+ [top](#top)
+ ### Deletion
+ some times may you push dangerous data, so you could delete it:
+ ```bash
+  git checkout --orphan latest_branch
+  git add -A
+  git commit -am "commit message"
+  git branch -D master
+  git branch -m master
+  git push -f origin master
+```
+
+[top](#top)
 <div dir='rtl'></div>
 <div dir='rtl'></div>
 <div dir='rtl'></div>
