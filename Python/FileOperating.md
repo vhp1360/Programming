@@ -9,7 +9,7 @@
 
 
 ### Csv
-- csv to json:
+1. csv to json:
 ```python
   import csv
 
@@ -28,4 +28,12 @@
       json.dump(Row,JsonFile)
 
       JsonFile.write("\n")
+```
+2. Query to csv:
+```python
+  import csv
+  with open('Sample.csv','w') as f:
+    writer=csv.writer(f)
+    writer.writerow([i[0] for i in curs.description])
+    writer.writerows(curs.fetchall())
 ```
