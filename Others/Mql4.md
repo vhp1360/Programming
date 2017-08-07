@@ -130,15 +130,30 @@ hexadecimal ASCII-code|\\xhh
         break;
       }
   ```
-  
+7. Function:
+```mql4
+  [void || or any datatype] function(Param1 Datatype,...){
+    Bodies
+    ...
+    return ...
+  }
+```
 
 
 [top](#top)
+
 #Indicators
 
 [top](#top)
-#Special Functions
 
+#Special Functions
+1. Program Bodies:
+  1/1. Init:
+  ```mql4
+    init(){
+    
+    }
+  ```
 [top](#top)
 #
 [top](#top)
