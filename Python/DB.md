@@ -5,6 +5,10 @@
   - [Connection](#connection)
   - [Data Insertion](#data-insertion)
   - [Query](#query)
+- [Oracle](#oracle)
+  - [Oracle-Connection](#oracle-connection)
+  - [Oracle-Data Insertion](#oracle-data-insertion)
+  - [Oracle-Query](#oracle-query)
 
 
 [top](#top)
@@ -67,5 +71,35 @@
   rows = BucketName.query('Accounts', 'Account_Days',group_level=2,limit=5)
   for row in rows: print row
 ```
+
+[top](#top)
+# Oracle
+##### Oracle-Connection
+1. with cx_Oracle:
+```python
+  import cx_Oracle
+  import os
+  import csv
+  ip = 'SomeThing'
+  port = 1521
+  SID = 'SomeThing'
+  dsn_tns = cx_Oracle.makedsn(ip, port, SID)
+  db = cx_Oracle.connect('UserName', 'Password', dsn_tns[, encoding = "UTF-8", nencoding = "UTF-8"])
+```
+
+##### Oracle-Data Insertion
+##### Oracle-Query
+1. with cx_Oracle:
+```python
+  curs = db.cursor()
+  curs.execute("SELECT * FROM  ....")
+  print (curs.description)
+  i=0
+  for row in curs:
+      print (row)
+      i+=1
+      if i>=10: break
+```
+
 
 [top](#top)
