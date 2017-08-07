@@ -13,7 +13,7 @@
 the syntax like C Language,
 
 [top](#top)
-#Syntax
+# Syntax
 1. Comment:
   - Single Comment:
   ```mql4
@@ -138,6 +138,38 @@ hexadecimal ASCII-code|\\xhh
     return ...
   }
 ```
+8. Variables:
+  - Scope of Variables:
+    1. Locale
+    2. Global
+  - Extern Variable: Define with _extern_ Keyword and Users could modify it.
+  ```mql4
+    extern DataaType VariableName=DefaultValue
+  ```
+9. Preprocessors: are the instructions you give to the compiler to carry them out before starting your app.
+  - Define: used to define Constant:
+  ```mql4
+    #define ConstantName Value;
+  ```
+  - Property: are the properties of your App.
+  ```mql4
+    #property Name Value;
+  ```
+    - Table of All Propertis:
+---|---|---
+Constant|Type|Description
+link|string|a link to the company website
+copyright|string|the company name
+stacksize|int|Stack Size
+indicator_chart_window|void|Show the indicator in chart Window
+indicator_separate_window|void|Show the indicator in separate Window
+indicator_buffers|int|the Number of buffers for calculations,up to 8
+indicator_minimum|int|bottum border for Chart
+indicator_maximum|int|Top border for the Chart
+indicator_colorN|color|the Color for displaying line N,up to 8
+indicator_levelN|double|predefined Level N for separate window custom Indicator,up to 8
+show_confirm|void|Show confirmation Message appear before run script
+show_inputs|void|appears property sheet before run script
 
 
 [top](#top)
@@ -146,15 +178,27 @@ hexadecimal ASCII-code|\\xhh
 
 [top](#top)
 
-#Special Functions
-1. Program Bodies:
-
-  1/1. Init:
+# Special Functions
+- Program Bodies:
+  1. Init:
   ```mql4
-    init(){
+    int init(){
     
     }
   ```
+  2. DeInit():
+  ```mql4
+    int deinit(){
+    
+    }
+  ```
+  3. Start:
+  ```mql4
+    start(){
+    
+    }
+  ```
+  
 [top](#top)
 #
 [top](#top)
