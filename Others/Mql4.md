@@ -157,20 +157,21 @@ hexadecimal ASCII-code|\\xhh
   ```
     - Table of All Propertis:
     
-    ---|---|---
-    Constant|Type|Description
-    link|string|a link to the company website
-    copyright|string|the company name
-    stacksize|int|Stack Size
-    indicator_chart_window|void|Show the indicator in chart Window
-    indicator_separate_window|void|Show the indicator in separate Window
-    indicator_buffers|int|the Number of buffers for calculations,up to 8
-    indicator_minimum|int|bottum border for Chart
-    indicator_maximum|int|Top border for the Chart
-    indicator_colorN|color|the Color for displaying line N,up to 8
-    indicator_levelN|double|predefined Level N for separate window custom Indicator,up to 8
-    show_confirm|void|Show confirmation Message appear before run script
-    show_inputs|void|appears property sheet before run script
+---|---|---
+Constant|Type|Description
+link|string|a link to the company website
+copyright|string|the company name
+stacksize|int|Stack Size
+indicator_chart_window|void|Show the indicator in chart Window
+indicator_separate_window|void|Show the indicator in separate Window
+indicator_buffers|int|the Number of buffers for calculations,up to 8
+indicator_minimum|int|bottum border for Chart
+indicator_maximum|int|Top border for the Chart
+indicator_colorN|color|the Color for displaying line N,up to 8
+indicator_levelN|double|predefined Level N for separate window custom Indicator,up to 8
+show_confirm|void|Show confirmation Message appear before run script
+show_inputs|void|appears property sheet before run script
+    
 10.
 
 [top](#top)
