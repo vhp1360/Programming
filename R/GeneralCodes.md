@@ -3,7 +3,7 @@
 ###### top
 
 - [Exception](#exception)
-
+- [Memory](#memory)
 
 # Exception
 1. Handling it:
@@ -17,4 +17,13 @@
   })
 ```
   
-  
+[top](#top)
+# Memory
+1. Clear Ram:
+```r
+  rm(list=ls()) 
+```
+2. Clean Garbage:
+```r
+  cleanMem <- function(n=10) { for (i in 1:n) gc() }
+```
