@@ -156,8 +156,9 @@ hexadecimal ASCII-code|\\xhh
     #property Name Value;
   ```
     - Table of All Propertis:
-    ---|---|---
+    
     Constant|Type|Description
+    ---|---|---
     link|string|a link to the company website
     copyright|string|the company name
     stacksize|int|Stack Size
