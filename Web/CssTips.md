@@ -24,8 +24,31 @@ if there is no layout, every things come consective(line long as much as it can)
      4. __absolute__ same as _fixed_ but inside the its parent Object
   ![Alt RelativeImg](Img/Position01.png)
   3. float: useful for wrap text around a image: <p ...> <img style="float:right" ...> Text ...</p>
-  ![Alt RelativeImg](Img/Float01.png)
+  ![Alt FloatImg](Img/Float01.png)
   4. clear: useful to prevent overlapping of floating Objects.
-  ![Alt RelativeImg](Img/Clear01.png)
-  ![Alt RelativeImg](Img/Clear02.png)
+  ![Alt ClearImg](Img/Clear01.png)
+  ![Alt ClearImg](Img/Clear02.png)
+  5. clearfix: may an Object contain an another Object that may has height or width greather than itself, __overflow:auto__ make parents growth as much as its child
+  ![Alt ClearFixImg](Img/ClearFix01.png)
+  ![Alt ClearFixImg](Img/ClearFix02.png)
+  6. doing some positiong with _float_ instead of _position_. __position:relative__ is needed as default
+  ![Alt Float02Img](Img/Float02.png)
+  ![Alt PercentImg](Img/Percent01.png)
+  7. What shall we do if would like to have well show on some kind of device?. the __media__ property is for this.
+     - Syntax is
+     ```
+       @media not|only mediatype and (media feature) {
+         CSS-Code;
+       }
+     ```
+     - __Media Types__ are:
+     Value|Description
+     ---|---
+     all|Used for all media type devices
+     print|Used for printers
+     screen|Used for computer screens, tablets, smart-phones etc.
+     speech|Used for screenreaders that "reads" the page out loud
+
+     
+  
   
