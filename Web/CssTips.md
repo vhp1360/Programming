@@ -1,4 +1,4 @@
-<div>بنام خدا</div>
+<div dir=rtl>بنام خدا</div>
 
 ##### top
 
@@ -19,8 +19,13 @@ if there is no layout, every things come consective(line long as much as it can)
   2. position:
      1. __static__ is default Position and object would't reposition any change of window or scroll
      2. __relative__ means realtive to _top,left,right,bottom_ properties those you define, without __relative__ you wouldn't give response from those properties
+    ![Alt RelativeImg](Img/Relative01.png)
      3. __fixed__ , fix Object from scroll in viewport, it need position properties
      4. __absolute__ same as _fixed_ but inside the its parent Object
-     
+  ![Alt RelativeImg](Img/Position01.png)
   3. float: useful for wrap text around a image: <p ...> <img style="float:right" ...> Text ...</p>
+  ![Alt RelativeImg](Img/Float01.png)
+  4. clear: useful to prevent overlapping of floating Objects.
+  ![Alt RelativeImg](Img/Clear01.png)
+  ![Alt RelativeImg](Img/Clear02.png)
   
