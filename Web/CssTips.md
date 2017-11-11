@@ -101,8 +101,21 @@ if there is no layout, every things come consective(line long as much as it can)
      - the example
      ![Alt MediaQueries](Img/MediaQueies01.png)
      ![Alt MediaQueries](Img/MediaQueries02.png)
-
-     
+  8. __inline-block__ cat does as _float_ but faster than it.
+  ![Alt InlineBlock](Img/InlineBlock01.png)
+  ![Alt InlineBlock](Img/InlineBlock02.png)
+     - and could use it as Layout but be care to:
+       1. __vertical-align__ should be specify
+       2. __width__ sould be define 
+       3. There will be a gap between the columns if there is any whitespace between them in the HTML 
+       ![Alt InlineLayout](Img/InlineLayout.png)
+  9. __column__ is a new CSS proprty.
+  ![Alt Column](Img/Column01.png)
+  10. [FlexBox](https://bocoup.com/blog/dive-into-flexbox) is new and has very changed.
+  ![Alt FlexBox](Img/FlexBox01.png)
+  ![Alt FlexBox](Img/FlexBox02.png)
+  ![Alt FlexBox](Img/FlexBox03.png)
+  
   
   
 [top](#top)
