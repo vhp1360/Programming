@@ -5,17 +5,27 @@
 
 - [Config Git](#config-git)
 - [Some Sequence Code](#some-sequence-code)
-- [Stach](#stach)
+- [Stash](#stash)
 - [Deletion](#deletion)
 
 [top](#top)
 ### Config Git
 at first time when you want connect source to existing repository:
 ```vim
+  git init
+  git add .
   git config --global user.name "Full UserName"
   git config --global user.email "Your Email"
-  git -u origin master
+  git remote add RemoteName ssh://git@IP/UserRrepoName/RrepoName.git
+  git stash .
+  git pull ssh://git@IP/UserRrepoName/RrepoName.git
+  git reset --merge <-- if you faced needs merge error: you need to resolve your current index first
+  git stash branch NewBrach <-- if you'd like or
+  git commit -m "Message"
+  git push -f RemoteName
+  
 ```
+
 
 ### Some Sequence Code
 ```vim
@@ -45,7 +55,7 @@ at first time when you want connect source to existing repository:
 ```
 
 [top](#top)
-### Stach Working
+### Stash Working
 ```vim
 git stash //Save all changes in Memory, it is needed before changiing Brach when you did not commit changes.
 git stash --keep-index //the same only tell GIT: do stash only which in stage
