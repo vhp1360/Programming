@@ -3,14 +3,22 @@
 
 ###### top
 
-
+- [Config Git](#config-git)
 - [Some Sequence Code](#some-sequence-code)
 - [Stach](#stach)
 - [Deletion](#deletion)
 
 [top](#top)
+### Config Git
+at first time when you want connect source to existing repository:
+```vim
+  git config --global user.name "Full UserName"
+  git config --global user.email "Your Email"
+  git -u origin master
+```
+
 ### Some Sequence Code
-```bash
+```vim
   git init
   git status
   git add
@@ -38,7 +46,7 @@
 
 [top](#top)
 ### Stach Working
-```vala
+```vim
 git stash //Save all changes in Memory, it is needed before changiing Brach when you did not commit changes.
 git stash --keep-index //the same only tell GIT: do stash only which in stage
 git stash -u //Git will also stash any untracked files you have created.
@@ -52,7 +60,7 @@ git clean -f -d(->subDir) -i(->Interactive flag) -n(->Verbose) -x(->fully clean)
 
 ```
 flow between versions
-```vala
+```vim
   git log --> in result you should find commit number of wich version you would.
   git checkout CommintSerialNumber --> Now you where there.
   git checkout -b NewBranchNameForOldVersion CommitSerialNumber --> your mentioned version would on NewBranchNameForOldVersion.enjoy it.
@@ -62,7 +70,7 @@ Merge Or Rebase?
 * rebase will merge current branch with BranchName , you are free to delete BranchName, 
 
 - Connect to None-trusted git-server : 
-  ```vala
+  ```vim
     git config --global user.name "YourName"
     git config --global user.mail "Email"
     git init
@@ -77,7 +85,7 @@ Merge Or Rebase?
  [top](#top)
  ### Deletion
  some times may you push dangerous data, so you could delete it:
- ```bash
+ ```vim
   git checkout --orphan latest_branch
   git add -A
   git commit -am "commit message"
