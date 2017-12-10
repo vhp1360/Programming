@@ -22,7 +22,7 @@ at first time when you want connect source to existing repository:
   git reset --merge <-- if you faced needs merge error: you need to resolve your current index first
   git stash branch NewBrach <-- if you'd like or
   git commit -m "Message"
-  git push -f RemoteName
+  git push -f RemoteName <-- if you faced Updates were rejected because the tip of your current branch is behind
   
 ```
 
