@@ -7,8 +7,8 @@
 - [Some Sequence Code](#some-sequence-code)
 - [Stash](#stash)
 - [Deletion](#deletion)
-- [ReBase](#rebase)
 - [Common Errors](#common-errors)
+- [Forkinf and Rebasing](#forking-and-rebasing)
 
 
 [top](#top)
@@ -107,7 +107,7 @@ Merge Or Rebase?
   git push -f origin master
 ```
 - Delete commits from a branch in Git
-```vala
+```vim
   git reset --hard HEAD  <- delete current Work and get back you to most recent commit.
   git reset --hard HEAD~1 <- will back you to previous Commit
   git push origin HEAD --force  <- remove current 
@@ -121,18 +121,35 @@ Merge Or Rebase?
 ### Common Errors
 - Git refusing to merge unrelated histories:
   - During git rebase origin/development following error message is shown from git:
-  ```vala
+  ```vim
     fatal: refusing to merge unrelated histories
     Error redoing merge 1234deadbeef1234deadbeef
   ```
   then should:
-  ```vala
+  ```vim
     git pull origin master --allow-unrelated-histories
     git merge origin origin/master
     ... add and commit here...
     git push origin master
   ```
 
+[top](#top)
+### Forkinf and Rebasing
+[According this Doc](https://help.github.com/articles/fork-a-repo/), 
+```vim
+  git clone https://github.com/YOUR-USERNAME/Repo.git
+  git remote add upstream https://github.com/octocat/Repo.git
+```
+  - Keep Fork Up2Date:
+  ```vim
+    git fetch upstream
+    git merge upstream/master
+  ```
+  
+
+
+
+[top](#top)
 <div dir='rtl'></div>
 <div dir='rtl'></div>
 <div dir='rtl'></div>
