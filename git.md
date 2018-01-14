@@ -7,6 +7,8 @@
 - [Some Sequence Code](#some-sequence-code)
 - [Stash](#stash)
 - [Deletion](#deletion)
+- [ReBase](#rebase)
+
 
 [top](#top)
 ### Config Git
@@ -94,7 +96,7 @@ Merge Or Rebase?
  
  [top](#top)
  ### Deletion
- some times may you push dangerous data, so you could delete it:
+ - some times may you push dangerous data, so you could delete it:
  ```vim
   git checkout --orphan latest_branch
   git add -A
@@ -103,6 +105,12 @@ Merge Or Rebase?
   git branch -m master
   git push -f origin master
 ```
+- Delete commits from a branch in Git
+```vala
+  git reset --hard HEAD  <- delete current Work and get back you to most recent commit.
+  git push origin HEAD --force  <- remove current 
+  git revert ...   <- if you push it already
+  
 
 [top](#top)
 <div dir='rtl'></div>
