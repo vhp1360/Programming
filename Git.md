@@ -59,6 +59,12 @@ at first time when you want connect source to existing repository:
 
 [top](#top)
 ### Stash Working
+#### Why Stash?
+Imagine you are in below state, what will you do?:
+  - 1. You do not want to commit your unfinished work but need to switch to a new branch to start some new work immediately.
+  - 2. A git pull results in conflicts however you do not want to commit local changes yet.
+  - 3. You realize you have worked in the wrong branch and want to move your uncommitted work to the right branch.
+the _Stash_ is solution. __It saves the working directory and index to a safe temporary place (the latest stash is usually at .git/refs/stash).__
 ```vim
 git stash //Save all changes in Memory, it is needed before changiing Brach when you did not commit changes.
 git stash --keep-index //the same only tell GIT: do stash only which in stage
@@ -68,9 +74,10 @@ git apply --index //the same with affect on stage
 git stash branch NewBranchName //create, switch into and pop stash into NewBranchName
 //it may we stash more than one changes.
 git stash list
-git stash drop stash@(No.)
+git stash pop stash@{No.}
+git stash drop stash@{No.}
+git stash clear
 git clean -f -d(->subDir) -i(->Interactive flag) -n(->Verbose) -x(->fully clean)
-
 ```
 flow between versions
 ```vim
