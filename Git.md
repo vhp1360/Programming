@@ -121,9 +121,17 @@ Merge Or Rebase?
 ### Common Errors
 - Git refusing to merge unrelated histories:
   - During git rebase origin/development following error message is shown from git:
-
-fatal: refusing to merge unrelated histories
-Error redoing merge 1234deadbeef1234deadbeef
+  ```vala
+    fatal: refusing to merge unrelated histories
+    Error redoing merge 1234deadbeef1234deadbeef
+  ```
+  then should:
+  ```vala
+    git pull origin master --allow-unrelated-histories
+    git merge origin origin/master
+    ... add and commit here...
+    git push origin master
+  ```
 
 <div dir='rtl'></div>
 <div dir='rtl'></div>
