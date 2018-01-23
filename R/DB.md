@@ -5,6 +5,7 @@
 - [Oracle](#oracle)
 - [Query](#query)
 - [Save](#save)
+- [Preserve Charset](#preserve-charset)
 - [Complete Path Code](#complete-path-code)
 
 
@@ -22,7 +23,6 @@
 ##### Query
 1. First:
 ```R
-  require(ROracle)
   Q=dbSendQuery(Con,"Select * From Table Where  ")
   Fa=fetch(Q)
 ```
@@ -31,20 +31,25 @@
 ##### Save
 1. Frist
 ```R
-  require(ROracle)
-  library(readr)
   write_csv(Fa,path = "sample.csv")
 ```
 
+[top](#top)
+##### Preserve Charset
+```R
+  Sys.setenv(NLS_LANG="AMERICAN_AMERICA.AL32UTF8")
+```
 
+
+[top](#top)
 ##### Complete Path Code
 1. Frist
 ```R
-  require(ROracle)
+  Sys.setenv(NLS_LANG="AMERICAN_AMERICA.AL32UTF8")
+  library(ROracle)
   library(readr)
-  Con=dbConnect(dbDriver("Oracle"),"IP/SID",username="UserName",password="Pass")
-  Q=dbSendQuery(Con,"Select * From Table Where ")
-  Faa=fetch(Q)
-  str(Faa)
-  write_csv(Faa,path = "sample.csv")
+  Con=dbConnect(dbDriver("Oracle"),"Port:1521/DBName",username="UserName",password="Password")
+  Q=dbSendQuery(Con,"Select * From ... ")
+  Fa=fetch(Q,n=No.)
+  write_csv(Fa,path = paste0("/media/Windows1/New",i,".csv"))
 ```
