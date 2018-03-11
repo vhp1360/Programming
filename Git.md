@@ -54,7 +54,8 @@ at first time when you want connect source to existing repository:
   git branch //list of branch
   git ls-tree BranchName //show files in BranchName
   git branch -m <oldname> <newname> //Rename Branch
-
+  git checkout -b <branch> <commit> //create a new branch from specific commit and goto it.
+  
 ```
 
 [top](#top)
