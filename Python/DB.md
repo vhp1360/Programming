@@ -9,7 +9,7 @@
   - [Oracle-Data Insertion](#oracle-data-insertion)
   - [Oracle-Query](#oracle-query)
 - [Access DB](#access-db)
-  - [Convert 2 Csv](#convert2csv)
+  - [Convert 2 Csv](#convert-2-csv)
   
 
 [top](#top)
@@ -125,7 +125,7 @@
       file.close()
 ```
 4- if you have multiple mdb file, could use this code:
-```sh
+```vala
   find . -name \*.mdb -exec python ./YourScript.py {} \;
 ```
 
