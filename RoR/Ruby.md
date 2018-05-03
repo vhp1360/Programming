@@ -65,6 +65,21 @@ Modifier | Description
     => #<MatchData "This is a" 1:"This" 2:"is" 3:"a">
   ```
   
+[top](#top)
+### Array
+- is [...] and accept every type in one array.
+- string to array:
+```rb
+  p "Strings.....".split(/\./){.inspect}   # _inspect_ is optional
+```
+- deal with array:
+```rb
+  [...].each {|elem| ....}
+  [...].collect{|elem| ....}   #result is a array
+```
+
+[top](#top)
+
 
 
 
