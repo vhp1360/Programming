@@ -79,7 +79,16 @@ Modifier | Description
 ```
 
 [top](#top)
-
+### Hashes
+- hash inside hash:
+```rb
+  people = {'Frist' => {'name' => 'Mohammad','age' => 63,'gender' => 'male',
+            'favorite painters' => ['Monet', 'Constable', 'Da Vinci']},
+            'Second' => {'name' => 'Ali','age' => 55,'gender' => 'female'}}
+  puts people['Frist']['age']
+  puts people['Second']['gender']
+  p people['Second']
+```
 
 
 
