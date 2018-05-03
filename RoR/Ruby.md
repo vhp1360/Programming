@@ -5,7 +5,7 @@
     - [Substitution](#substitution)
     - [Itration](#itration)
     - [Regular Experssion](#regular-experssion)
-
+    - [Matches](#matches)
 
 
 # Type
@@ -14,14 +14,19 @@
 ```rb
   puts "strings.....".sub("SomeThings","SomeThingsElse")
 ```
+
+[top](#top)
 ### Itration
 ```rb
   "Strings.....".scan(/../) do |q| puts q  //puts 2 characters each time
 ```
+
+[top](#top)
 ### Regular Experssion
 - Fisrt Table:
 
 Character | Meaning
+---|---
 ^  | Anchor for the beginning of a line
 $  | Anchor for the end of a line
 \A | Anchor for the start of a string
@@ -37,6 +42,7 @@ $  | Anchor for the end of a line
 - Second Table:
 
 Modifier | Description
+---|---
 *     | Match zero or more occurrences of the preceding character, and match as many as possible.
 +     | Match one or more occurrences of the preceding character, and match as many as possible.
 *?    | Match zero or more occurrences of the preceding character, and match as few as possible.
@@ -44,4 +50,32 @@ Modifier | Description
 ?     | Match either one or none of the preceding character.
 {x}   | Match x occurrences of the preceding character.
 {x,y} | Match at least x occurrences and at most y occurrences.
+
+
+[top](#top)
+### Matches
+```rb
+  puts "there is not any digit in this sentence" unless "sample Sentence" =~ /[0-9]/
+  # another way as always
+  puts "there is not any digit in this sentence" unless "sample Sentence".match(/[0-9]/)
+```
+  - be care like below:
+  ```rb
+    x = "This is a test".match(/(\w+) (\w+) (\w+)/)
+    => #<MatchData "This is a" 1:"This" 2:"is" 3:"a">
+  ```
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
