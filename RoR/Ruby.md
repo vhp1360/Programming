@@ -6,7 +6,10 @@
     - [Itration](#itration)
     - [Regular Experssion](#regular-experssion)
     - [Matches](#matches)
-
+    - [Array](#array)
+    - [Hashes](#hashes)
+- [Flow Controls and Conditions](#flow-controls-and-conditions)
+    
 
 # Type
 ## String literal
@@ -90,7 +93,51 @@ Modifier | Description
   p people['Second']
 ```
 
+[top](#top)
+# Flow Controls and Conditions
+### if
+```rb
+  if Condition Clause
+    result
+  elsif ...
+    ...
+  else
+    ...
+  end
+  Variable= Condition Clause? TrueResult:FalseResult
+```
+### unless
 
+### case
+```rb
+  case Param
+    when FirstCondition
+    Variable=Result1
+    when SecondCondition
+    Variable=Result2
+    ...
+    else
+    ...
+    end
+  # another Way
+  Variable=case Param
+    when FirstCondition
+    Result1
+    ...
+    end
+```
+    
+    
+### while
+
+### until
+```rb
+  i = 1
+  i = i * 2 until i > 1000
+  puts i
+```
+
+# CodeBlocks,Functions,Procedures,Lambdas
 
 
 
