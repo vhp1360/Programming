@@ -108,6 +108,7 @@ Modifier | Description
 ```
 ### unless
 
+[top](#top)
 ### case
 ```rb
   case Param
@@ -128,8 +129,10 @@ Modifier | Description
 ```
     
     
+[top](#top)
 ### while
 
+[top](#top)
 ### until
 ```rb
   i = 1
@@ -137,16 +140,59 @@ Modifier | Description
   puts i
 ```
 
+[top](#top)
 # CodeBlocks,Functions,Procedures,Lambdas
+### Code Blocks
+```rb
+  {puts "Hello"}
+  do
+    puts "Hello"
+  end
+  1.upto(10).each {|n| puts n*19}
+```
+[top](#top)
+### Functions
 
+[top](#top)
+### Procedures
+```rb
+  Proc.new { puts "Hello"}
+  Proc.new do
+    puts "Hello"
+  end
+  proc {puts "Hello"}
+  test= proc {puts "Hello"}
+  test.call()
+```
 
+[top](#top)
+### Lambdas
+```rb
+  lambda {puts "Hello"}
+  lambda do
+    puts "Hello"
+  end
+  -> {puts "Hello"}
+  -> (arg) {puts arg}
+  -> { |arg| puts arg}
+  test= ->{1.upto(10).each{|n| n}
+  test.yield[0]
+```
 
+[top](#top)
 
+[top](#top)
 
+[top](#top)
 
+[top](#top)
 
+[top](#top)
 
+[top](#top)
 
+[top](#top)
 
+[top](#top)
 
-
+[top](#top)
