@@ -9,6 +9,10 @@
     - [Array](#array)
     - [Hashes](#hashes)
 - [Flow Controls and Conditions](#flow-controls-and-conditions)
+  - [Code Blocks](#code-blocks)
+  - [Functions](#functions)
+  - [Procedures](#procedures)
+  - [Lambda](#lambda)
     
 
 # Type
@@ -143,6 +147,7 @@ Modifier | Description
 [top](#top)
 # CodeBlocks,Functions,Procedures,Lambdas
 ### Code Blocks
+- definition:
 ```rb
   {puts "Hello"}
   do
@@ -150,11 +155,24 @@ Modifier | Description
   end
   1.upto(10).each {|n| puts n*19}
 ```
+
 [top](#top)
 ### Functions
+- definition
+```rb
+
+```
+- Block as Input parameter:
+```rb
+  def func1(a,&codeBlock)
+    a.each{|a| codeBlock.call(a)} 
+  end
+  func1(%w{1,2,3,4,5}) {|a| put a}  # as you see its very fun lang, we use _a_ in all block without confusing :-)
+```
 
 [top](#top)
 ### Procedures
+- definition
 ```rb
   Proc.new { puts "Hello"}
   Proc.new do
