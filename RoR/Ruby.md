@@ -98,6 +98,39 @@ Modifier | Description
 ```
 
 [top](#top)
+### Time
+- time in Ruby store ms from 1/1/97, it means you could do calculation on it.
+```rb
+  Time.now + 10 # be care _10_ here means __10 Second not milisecond__
+```
+  - some developer extend ___Fixnum___ class to below:
+  ```rb
+    class Fixnum
+      def minutes
+        self*60
+      end
+      def hours
+        self * 60 * 60
+      end  
+      def days
+        self * 60 * 60 * 24
+      end  
+    end
+  ```
+  then we could use command like:
+   ```rb
+     Time.now + 19.hours
+   ```
+ - _Time.local_ , _Time.gm_ , _Time.utc_ are local time, greendwich and Universal time respectively:
+ ```rb
+   Time.local(yAER,mONTH,dAY,hOUR,mINUTE,sECOND,mILISECOND) # all are numbers
+ ```
+ - Find Time element from number:
+ ```rb
+   Time.at(1431431418).year
+   # => 2015
+ ```
+
 # Flow Controls and Conditions
 ### if
 ```rb
@@ -154,6 +187,11 @@ Modifier | Description
     puts "Hello"
   end
   1.upto(10).each {|n| puts n*19}
+```
+- we could use _Lambda_ to store _code block_ and then call it:
+```rb
+  lAMBDA= lambda {|q| q.each {|q| puts q}}
+  lAMBDA.call(1.upto(10))
 ```
 
 [top](#top)
