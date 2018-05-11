@@ -8,6 +8,9 @@
     - [Matches](#matches)
     - [Array](#array)
     - [Hashes](#hashes)
+    - [Time](#time)
+    
+    
 - [Flow Controls and Conditions](#flow-controls-and-conditions)
   - [Code Blocks](#code-blocks)
   - [Functions](#functions)
@@ -121,15 +124,36 @@ Modifier | Description
    ```rb
      Time.now + 19.hours
    ```
- - _Time.local_ , _Time.gm_ , _Time.utc_ are local time, greendwich and Universal time respectively:
- ```rb
-   Time.local(yAER,mONTH,dAY,hOUR,mINUTE,sECOND,mILISECOND) # all are numbers
- ```
- - Find Time element from number:
- ```rb
-   Time.at(1431431418).year
-   # => 2015
- ```
+  - _Time.local_ , _Time.gm_ , _Time.utc_ are local time, greendwich and Universal time respectively:
+  ```rb
+    Time.local(yAER,mONTH,dAY,hOUR,mINUTE,sECOND,mILISECOND) # all are numbers
+  ```
+  - Find Time element from number:
+  ```rb
+    Time.at(1431431418).year
+    # => 2015
+  ```
+- Time Object Methods Used to Access Date/Time Attributes:
+Method | Returns
+---|---
+hour | A number representing the hour in 24-hour format ( 21 for 9 p.m., for example).
+min | The number of minutes past the hour.
+sec | The number of seconds past the minute.
+usec | The number of microseconds past the second (there are 1,000,000 microseconds per second).
+day | The number of the day in the month.
+mday | Synonym for the day method, considered to be “month” day.
+wday | The number of the day in terms of the week (Sunday is 0 , Saturday is 6 ).
+yday | The number of the day in terms of the year.
+month | The number of the month of the date ( 11 for November, for example).
+year | The year associated with the date.
+zone | Returns the name of the time zone associated with the time.
+utc? | Returns true or false depending on if the time/date is in the UTC/GMT time zone or not.
+gmt? | Synonym for the utc ? method for those who prefer to use the term GMT.
+  for example:
+  ```rb
+    irb(main):027:0> Time.at(1431431418).wday
+    # => 2
+  ```
 
 # Flow Controls and Conditions
 ### if
@@ -148,7 +172,7 @@ Modifier | Description
 [top](#top)
 ### case
 ```rb
-  case Param
+  case Param 
     when FirstCondition
     Variable=Result1
     when SecondCondition
