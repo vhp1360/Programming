@@ -9,6 +9,7 @@
     - [Array](#array)
     - [Hashes](#hashes)
     - [Time](#time)
+    - [Ranges](#ranges)
     
     
 - [Flow Controls and Conditions](#flow-controls-and-conditions)
@@ -154,6 +155,21 @@ gmt? | Synonym for the utc ? method for those who prefer to use the term GMT.
     irb(main):027:0> Time.at(1431431418).wday
     # => 2
   ```
+### Ranges
+its simple:
+```rb
+  ('a'..'z')
+```
+  - it has some methodes:
+    1. convert to aray: `('a'..'z').to_a`
+    2. `each` methode like as always.
+    3. member test: `('a'..'z').include?('S') `
+### Symbols
+- in a simple explanation: like string, but same _Symbole_ use one place of memory. we used it in _hash_ definition.
+```rb
+  sYmbole= :Name
+```
+
 
 # Flow Controls and Conditions
 ### if
