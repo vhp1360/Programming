@@ -169,7 +169,7 @@ its simple:
 ```rb
   sYmbole= :Name
 ```
-
+- it has `to_s` methode to convert _Symbole_ to _String_
 
 # Flow Controls and Conditions
 ### if
