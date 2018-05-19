@@ -54,13 +54,13 @@ $  | Anchor for the end of a line
 
 Modifier | Description
 ---|---
-*     | Match zero or more occurrences of the preceding character, and match as many as possible.
-+     | Match one or more occurrences of the preceding character, and match as many as possible.
-*?    | Match zero or more occurrences of the preceding character, and match as few as possible.
-+?    | Match one or more occurrences of the preceding character, and match as few as possible.
-?     | Match either one or none of the preceding character.
-{x}   | Match x occurrences of the preceding character.
-{x,y} | Match at least x occurrences and at most y occurrences.
+\*     | Match zero or more occurrences of the preceding character, and match as many as possible.
+\+     | Match one or more occurrences of the preceding character, and match as many as possible.
+\?     | Match either one or none of the preceding character.
+\*\?   | Match zero or more occurrences of the preceding character, and match as few as possible.
+\+\?   | Match one or more occurrences of the preceding character, and match as few as possible.
+\{x\}  | Match x occurrences of the preceding character.
+\{x,y\}| Match at least x occurrences and at most y occurrences.
 
 
 [top](#top)
@@ -74,6 +74,12 @@ Modifier | Description
   ```rb
     x = "This is a test".match(/(\w+) (\w+) (\w+)/)
     => #<MatchData "This is a" 1:"This" 2:"is" 3:"a">
+    x.length
+    => 4
+    x = "This is a test".match(/\w+ \w+ \w+/)
+    => #<MatchData "This is a">
+    x.length
+    => 1
   ```
   
 [top](#top)
