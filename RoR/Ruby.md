@@ -93,7 +93,12 @@ Modifier | Description
 ```rb
   [...].each {|elem| ....}
   [...].collect{|elem| ....}   #result is a array
+  %w{word1 word2 word3 ...}.select{|word| !%w{elem1 elem2 ...}.include?(word)} # return an array that not include in clause
+  %w{word1 word2 word3 ...}.reject{|word| !%w{elem1 elem2 ...}.include?(word)} # return an array that include in clause
+  String.split(/.../)  #return an array, default seperator is Space
+  Array.join('...') # return a string, default joinner is Space
 ```
+* to define a string array as simple way: `a=%w{word1 word2 word3 ...}`
 
 [top](#top)
 ### Hashes
