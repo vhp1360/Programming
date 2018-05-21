@@ -17,7 +17,7 @@
   - [Functions](#functions)
   - [Procedures](#procedures)
   - [Lambda](#lambda)
-    
+- [Class](#class)    
 
 # Type
 ## String literal
@@ -287,6 +287,46 @@ its simple:
 ```
 
 [top](#top)
+# Class
+## definition:
+```rb
+  class ClassName
+    def initialize(InputParams)
+      @InstanceVariables= assing InputParams
+      ...
+    end
+    if defined?(@@ClassVariable)
+      Some thing with @@ClassVariable
+    def InstanceMethod(InputParams)
+      ...
+    end
+    def [self|ClassName].ClassMethod(...)
+      ...
+    end
+    ...
+  end
+```
+- What is diffrent between Instance and class variable|Method?
+  - Instance Variable is define for each new Object of class but
+  - Class Variable is static object in class and is shared between all Objects those creat from class
+  
+## Inheritence:
+```rb
+  class ParentName
+    def initialize(..)
+      ...
+    end
+    def Test(InputParams)
+      ...
+    end
+    ...
+  end
+  class ChildName < ParentName
+    ...
+    def Test
+     ... + super   #nice!! you are free of howmany InputParams in ParentClass
+  end
+```
 
 [top](#top)
 
