@@ -13,6 +13,12 @@
     
     
 - [Flow Controls and Conditions](#flow-controls-and-conditions)
+  - [if](#if)
+  - [unless](#unless)
+  - [case](#case)
+  - [while](#while)
+  - [until](#until)
+- [CodeBlocks,Functions,Procedures,Lambdas](#odeblocksfunctionsprocedureslambdas)
   - [Code Blocks](#code-blocks)
   - [Functions](#functions)
   - [Procedures](#procedures)
