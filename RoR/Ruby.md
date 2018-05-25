@@ -23,7 +23,10 @@
   - [Functions](#functions)
   - [Procedures](#procedures)
   - [Lambda](#lambda)
-- [Class](#class)    
+- [Class](#class)   
+  - [Inheritance](#inheritance)
+  - [Nested Class](#nested-class)
+- [Modules, Namespaces, and Mix-Ins](#modulesnamespaces-and-mix-ins)
 
 # Type
 ## String literal
@@ -309,9 +312,17 @@ its simple:
     def [self|ClassName].ClassMethod(...)
       ...
     end
+    private
+      def ...
+        ...
+      end
+    
     ...
   end
 ```
+  - you could define all things in class as public and after that, use `private :def_Name :... ` to make them as private.
+  - `protect :... ` is last scope of __OOP__ .
+  
 - What is diffrent between Instance and class variable|Method?
   - Instance Variable is define for each new Object of class but
   - Class Variable is static object in class and is shared between all Objects those creat from class
@@ -333,8 +344,32 @@ its simple:
      ... + super   #nice!! you are free of howmany InputParams in ParentClass
   end
 ```
+## Nested Class
+Sometimes we need classes but when a main class was defined. for example we need _Pen_ , _Eraser_ , _Line_ when we want 
+  _Draw_ and create _Draw_ class:
+```rb
+  class Draw
+    def cREATE_a_Line
+      Line.new
+    end
+    class Line
+      def lINE_methode
+        p "Hello I'm a line"
+      end
+    end
+  end
+```
+How to call nesteded class:
+```rb
+  a=Draw.new
+  a.lIne.lINE_methode
+  b=Draw::Line.new
+  b.lINE_methode
+```
+- actually we could access all public _class's_ methodes with double _colon_.
 
 [top](#top)
+# Modules, Namespaces, and Mix-Ins
 
 [top](#top)
 
