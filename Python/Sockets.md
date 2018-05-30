@@ -11,7 +11,7 @@
 ```python
   import socket
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-  s.connect(('master.shomara.ir', 2110))
+  s.connect(('IP', 2110))
   for i in Df:
     s.send(','.join(i.asDict().values()).encode('utf-8')+'\n'.encode('utf-8'))
     print(i)
