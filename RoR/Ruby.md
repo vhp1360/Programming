@@ -26,7 +26,7 @@
 - [Class](#class)   
   - [Inheritance](#inheritance)
   - [Nested Class](#nested-class)
-- [Modules, Namespaces, and Mix-Ins](#modulesnamespaces-and-mix-ins)
+- [Namespaces, Modules and Mix-Ins](#namespacesmodules-and-mix-ins)
 
 # Type
 ## String literal
@@ -369,7 +369,73 @@ How to call nesteded class:
 - actually we could access all public _class's_ methodes with double _colon_.
 
 [top](#top)
-# Modules, Namespaces, and Mix-Ins
+# Namespaces, Modules and Mix-Ins
+## Namespaces, Modules
+simply you call other _ruby_ files to include their codes in current _ruby file_.
+assume we have __File1.rb__ as below:
+```rb
+  module NAMESPACE1
+    class ClassTest
+      def classtest
+        p "Hello From First NameSpace from ClassTest"
+      end
+    end
+    def self.test
+      p "Hello From First NameSpace in Module"
+    end  
+  end
+  def test 
+    p "Hello From First NameSpace"
+  end
+```
+and __File2.rb__ like this:
+```rb
+  module NAMESPACE2
+    class ClassTest
+      def classtest
+        p "Hello From First NameSpace from ClassTest"
+      end
+    end
+    def self.test
+      p "Hello From Second NameSpace in Module"
+    end  
+  end
+  def test 
+    p "Hello From Second NameSpace"
+  end
+```
+now, in __File3.rb__ we have:
+```rb
+  require './File1.rb'
+  require './File2.rb'
+  test    <= this ambigous function calling
+  NAMESPACE1.test
+  NAMESPACE2.test
+  NAMESPACE1::ClassTest.new.classtest
+  NAMESPACE2::ClassTest.new.classtest
+```
+then NameSpace and Module should be clear.
+## Mix-Ins
+___ruby___ has not got multi inheritances.
+OK! but it has solution called: __Mix-Ins__.
+consider below class:
+```rb
+  class Test
+    include Enumerable
+    Const= %w {M o h a m a d}
+    def each                     <= if we donot include Enumerable, we could not define this
+      Const.each {|a| yield a*2}
+    end
+  end
+```
+now, we could use each item that has _iterate_ like _collect_,_select_,_detect_,_sort_ for ___Class Instance__:
+```rb
+  a=Test.new
+  a.each{|w| p w}
+```
+
+## Modules
+
 
 [top](#top)
 
