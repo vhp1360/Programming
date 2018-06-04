@@ -26,7 +26,7 @@
 - [Class](#class)   
   - [Inheritance](#inheritance)
   - [Nested Class](#nested-class)
-- [Namespaces, Modules and Mix-Ins](#namespacesmodules-and-mix-ins)
+- [Namespaces, Modules and Mix-Ins](#namespaces-modules-and-mix-ins)
 
 # Type
 ## String literal
