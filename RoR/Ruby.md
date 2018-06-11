@@ -300,6 +300,7 @@ its simple:
 ## definition:
 ```rb
   class ClassName
+  attr_accessor :varName1, ...
     def initialize(InputParams)
       @InstanceVariables= assing InputParams
       ...
@@ -326,7 +327,32 @@ its simple:
 - What is diffrent between Instance and class variable|Method?
   - Instance Variable is define for each new Object of class but
   - Class Variable is static object in class and is shared between all Objects those creat from class
-  
+- what does _attr\_accessor_ do?
+  - it creates _Setter_ and _getter_ for all variables defined. if we define `attr_accessor :varName`, 
+    it will does like below:
+  ```rb
+    def varName=(varName)
+      @varName=varName
+    end
+    def varName
+      @varName
+    end
+  ```
+## Structure
+we could say with a good precision that the __Struct__ure is the same as class:
+```rb
+  StrucName=Struct.new(:var1,:var2,...)
+  class StructName
+    attr_accessor :var1,:var2,...
+    def initialize(var1,var2,...)
+      @var1=var1
+      @va2=va2
+      ...
+    end
+  end
+  structVar=StructName.new(var1,var2,...)
+```
+
 ## Inheritence:
 ```rb
   class ParentName
@@ -406,8 +432,8 @@ and __File2.rb__ like this:
 ```
 now, in __File3.rb__ we have:
 ```rb
-  require './File1.rb'
-  require './File2.rb'
+  {require|require_relative|load} './File1.rb'
+  {require|require_relative|load} './File2.rb'
   test    <= this ambigous function calling
   NAMESPACE1.test
   NAMESPACE2.test
@@ -415,6 +441,20 @@ now, in __File3.rb__ we have:
   NAMESPACE2::ClassTest.new.classtest
 ```
 then NameSpace and Module should be clear.
+- what are require,require_relative,load?
+  - __require__ search for a file in _Rub_Path_ directory, those fine in __$LAOD\_PATH__(or $: in shorthand)
+    while __load__ and __require\_relative__ only serach in _current directory_
+  - __require__ and __require\_relative__ load file _only one time_ while __load__ load file _each time you call_
+  - in __load__ command, _.rb_ postfix _should be mentioned_ while __require__ and __require\_relative__ donot need.
+- these three command like other ruby commands. it means you could use them every where:
+```rb
+  %w{file1 file2 file3 file4 file5}.each { |l| require l }
+  require $debug_mode==0? "File1":"File2"
+```
+- what dows happen in Nested Inclusion:
+  - assume in _a.rb_ we include _b.rb_ and in that we include _c.rb_ and in that we include _d.rb_ and in _e.rb_ we 
+    include __a.rb__ and __test__ is function in __d.rb__, we simply could call it in __e.rb__.
+
 ## Mix-Ins
 ___ruby___ has not got multi inheritances.
 OK! but it has solution called: __Mix-Ins__.
